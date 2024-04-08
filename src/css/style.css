@@ -1,0 +1,285 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* background-color: #d2c9fa; */
+  background: linear-gradient(150deg, #000 0%, #9E00FF 100%), #D9D9D9;
+  background-size: 120% 120%;
+  color: #fff;
+  /* A fonte Poppins esta carregado no HTML */
+  /* va entre comillas para comprender que carga vía link, no está en el sistema. */
+  font-family: "Poppins", sans-serif;
+
+  /* Alinear todo en el centro */
+  margin: 0 auto;
+  max-width: 1120px; /*largura maxima de nuestro body, contendra todos nuestros elementos. */ 
+}
+
+a {
+  color: #fff;
+} 
+
+/* –––––––––––––– */
+/* SECTION HEADER */
+/* –––––––––––––– */
+
+/* CABECALHO */
+.cabecalho {
+  /* background-color: burlywood; */
+  display: flex; /* ubica los elementos del container en la misma línea. */
+  flex-direction: row; /* Alinea, por defecto esta siempre row, en formata de fila. No hace falta colocar... pero a modo de ejemplo lo usamos.  */
+  align-items: center; /* Alinea horizontalmente ambos elementos (a y nav ). */
+  justify-content: space-between; /* Justifica ambos elementos verticalmente. El valor space-between hace que los 2 elementos vayan hacia los laterales. */
+  padding: 30px 15px ;
+}
+
+.cabecalho .logo {
+  /* background-color: orange; */
+  width: 64px; /* Dimensi[on del logo.  */
+  height: 64px; /* Dimensi[on del logo.  */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; 
+  border: 2px solid #FFF;
+
+  text-decoration: underline;
+
+
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 55px;
+  transition: 0.2s; 
+}
+
+.cabecalho a:hover .logo {
+  background-color: #9443D8;
+  border: 2px solid #fff;
+}
+
+.cabecalho .menu ul {
+  /* background-color: red; */
+}
+
+.cabecalho .menu li a {
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+  text-transform: capitalize;
+  padding: 10px 20px;
+  transition: 0.2s;
+}
+
+.cabecalho .menu li a:hover {
+   background-color: #9443D8;
+   color: #fff;
+   border-radius: 50px;
+}
+
+
+/* –––––––––––– */
+/* SECTION HOME */
+/* –––––––––––– */
+
+.home {
+  /* background-color: goldenrod; */
+  /* display: inline-flex; */
+  display: flex ;
+  align-items: center;
+  gap: 110px;  
+  justify-content: space-between; /* Ubica la informacion (texto) y la foto en los laterales del contenedor .home. */
+  padding: 240px 0px;
+}
+
+/* INFORMACIONES */
+.home .informacoes {
+  /* background-color: #95da0b; */
+  /* Las 2 lineas de abajo creo que se heredan, no hace falta */
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 0 15px;
+  /* Ver si hace falta lo de abajo. */
+  max-width: 50%; /* Indica que % ocupará */
+}
+
+.home .informacoes h1 {
+  font-family: Raleway;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+.home .informacoes p {
+  font-family: Raleway;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+}  
+
+.home .redes-sociais {
+  /* background-color: darkolivegreen; */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.home .redes-sociais a i {
+  display: flex;
+  width: 50px;
+  height: 50px;  
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: 1px solid #FFF;
+  transition: 0.3s;
+
+  text-align: center;
+  font-family: "Font Awesome 5 Brands";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 100% */
+  letter-spacing: 2px;
+}
+
+.home .redes-sociais a i:hover {
+  color: #9443D8;
+  border: 1px solid #9443D8;
+  transform: scale(1.1);
+}
+
+/* FOTO */
+.home .container-foto .foto {
+  /* background-color: olive; */
+  min-width: 100%;
+  border-radius: 50%;
+}
+
+.home .container-foto img {
+   width: 100%;
+   border-radius: 50%;
+}
+
+.home .foto.sombra-interna {
+  background: linear-gradient(to right, #8A35C8, #18C063, #00EEA2);
+  background-size: 180% 180%;
+  animation: gradient-animation 5s ease0 infinite;
+}
+
+
+/* –––––––– */
+/* PROJETOS */
+/* –––––––– */
+
+.projetos {
+  /* background-color: goldenrod; */
+  padding: 70px 0;
+}
+
+.projetos .titulo {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.projetos .container-projetos {
+  /* background-color:hotpink; */
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* margin-bottom: 20px; */
+  padding: 56px 0px 24px 0px; /* Aparta el título a 56px y el button a 24px. de los cards. */
+}
+
+.projetos .projeto {
+  max-width: 265px;
+  max-height: 510px;
+  position: relative;
+  display: none; 
+}
+
+.projetos .projeto.ativo {
+  display: block;
+}
+
+.projetos .projeto img {
+  height: 100%;
+}
+
+.projetos .projeto h3 {
+  background-color: #040203;
+  width: 100%;
+  padding: 20px 12px;
+  /* Trabajo con el "position: relative;" que tiene el padre en ".projetos .projeto { }".*/
+  position: absolute;
+  bottom: 0; /* Hace que el h3 se ubique en la posición 0 en el bottom gracias a "position: absolute;".*/
+}
+
+.projetos .projeto .informacoes-projeto {
+  background-color: #040203;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto {
+  opacity: 0.7;
+  background-color: 000;
+}
+
+.projetos .btn-mostrar-projetos {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  color: #fff;
+  width: 180px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.projetos .btn-mostrar-projetos:hover {
+  background-color: #9433d8;
+  transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover {
+  display: none;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
